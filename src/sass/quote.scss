@@ -1,0 +1,16 @@
+@use 'variables.scss'as v;
+
+.quote-1 {
+    font-size: v.$fontSizeHeading;
+    color: v.$alternateTextColor;
+    text-align: center;
+}
+
+.quote-2 {
+    text-align: center;
+    font-size: v.$fontSizeQuote;
+    padding: 40px 100px;
+}
+
+
+

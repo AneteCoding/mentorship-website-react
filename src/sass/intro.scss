@@ -1,0 +1,28 @@
+@use 'variables.scss'as v;
+
+.heading {
+    background: url(background.jpg);
+    background-size: cover;
+    max-width: 50%;
+    height: 85vh;
+    display: block;
+    margin: 0 auto;
+    padding: 40px 100px;
+}
+
+.intro {
+    color: v.$alternateTextColor;
+}
+
+.title {
+    font-size: v.$fontSizeTitle;
+    color: v.$alternateTextColor;
+    text-align: center;
+    padding: 40px;
+}
+
+.learn-more {
+    display: flex;
+    justify-content: center;
+    padding: 20px;
+}

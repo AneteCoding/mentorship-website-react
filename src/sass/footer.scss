@@ -1,0 +1,8 @@
+@use 'variables.scss'as v;
+
+footer {
+    color: v.$footerColor;
+    text-align: center;
+    font-size: v.$fontSizeFooter;
+    padding-bottom: 20px;
+}
