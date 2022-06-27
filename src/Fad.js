@@ -78,8 +78,8 @@ const FactContainer = ({
             className="fact-container"
         >
             <div
-                className={`fact chevron ${fact === openFact ? "buttom" : "right"
-                    }`}
+                className={`fact chevron 
+                ${fact === openFact ? "bottom" : "right"}`}
             >
                 {fact}
             </div>
