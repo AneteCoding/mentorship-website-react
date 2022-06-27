@@ -53,7 +53,7 @@ const fadData = [
             <>
                 You can do this right here 👉
                 <a
-                    class="button"
+                    className="button"
                     href="https://europe.consciousplanet.org/earth-buddies/"
                     target="_blank"
                 >I want to save soil</a
@@ -63,12 +63,26 @@ const fadData = [
     }
 ]
 
-const FactContainer = ({ fact, description, setOpenFact, isOpen }) => {
-
-
+const FactContainer = ({
+    fact,
+    openFact,
+    description,
+    setOpenFact,
+    isOpen,
+}) => {
     return (
-        <div onClick={() => setOpenFact(fact)} className="fact-container">
-            <div className="fact">{fact}</div>
+        <div
+            onClick={() =>
+                setOpenFact(fact === openFact ? null : description)
+            }
+            className="fact-container"
+        >
+            <div
+                className={`fact chevron ${fact === openFact ? "buttom" : "right"
+                    }`}
+            >
+                {fact}
+            </div>
             {isOpen && <div className="description">{description}</div>}
         </div>
     )
@@ -77,17 +91,21 @@ const FactContainer = ({ fact, description, setOpenFact, isOpen }) => {
 const Fad = () => {
     const [openFact, setOpenFact] = useState(null)
     return (
-        <>
+        <section id="learn-more">
             <div className="learn-more">
-                <a className="button" href="https://consciousplanet.org/" target="_blank"
-                >LEARN MORE</a
+                <a className="button"
+                    href="https://consciousplanet.org/"
+                    target="_blank"
                 >
+                    LEARN MORE
+                </a>
             </div>
-            <div className="toggle-btn">
+            {/* <div className="toggle-btn">
                 <button className="button" id="toggle-all" onclick="openAll()">
                     OPEN ALL
                 </button>
-            </div>
+            </div> */}
+
             <div id="fad" className="fad">
                 {fadData.map((item) => (
                     <FactContainer
@@ -96,9 +114,11 @@ const Fad = () => {
                         description={item.description}
                         setOpenFact={setOpenFact}
                         isOpen={openFact === item.fact}
+                        openFact={openFact}
                     />
                 ))}
-            </div></>
+            </div>
+        </section>
     )
 }
 export default Fad;

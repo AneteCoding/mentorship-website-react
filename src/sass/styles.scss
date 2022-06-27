@@ -1,6 +1,6 @@
 @use 'variables.scss'as v;
 @use 'helpers.scss'as h;
-@use 'chevron.scss'as chevron;
+@use 'chevron.scss';
 @use 'fad.scss'as fad;
 @use 'footer.scss'as footer;
 @use 'intro.scss'as intro;
@@ -8,10 +8,38 @@
 @use 'social.scss'as social;
 @use 'video.scss'as video;
 
+
 html {
     scroll-behavior: smooth;
 }
 
 body {
     font-family: "Montserrat", sans-serif;
+}
+p {
+    text-align: center;
+    font-size: v.$fontSizeIntro;
+}
+
+.highlighted-text:hover {
+    text-decoration: underline;
+}
+
+.button {
+    background-color: v.$primaryColor;
+    text-decoration: none;
+    border: 1px solid v.$secondaryColor;
+    border-radius: 12px;
+    padding: 20px;
+    color: v.$alternateTextColor;
+
+    &:hover {
+        background-color: v.$alternateTextColor;
+        color: v.$primaryColor;
+        transition: all 0.5s;
+    }
+}
+
+.toggle-btn {
+    padding: 40px 100px;
 }
