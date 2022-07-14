@@ -73,7 +73,7 @@ const FactContainer = ({
     return (
         <div
             onClick={() =>
-                setOpenFact(fact === openFact ? null : description)
+                setOpenFact(fact === openFact ? null : fact)
             }
             className="fact-container"
         >
